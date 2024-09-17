@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to top, #ffcccc, #ff99cc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            text-align: center;
+            color: #fff;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff4d4d;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff4d4d; /* Vermelho amor */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e60000;
+        }
+
+        #mensagem {
+            font-size: 1.5em;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: float 5s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 20%;
+            animation-duration: 4s;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 50%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(3) {
+            left: 70%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(4) {
+            left: 30%;
+            animation-duration: 7s;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(5) {
+            left: 60%;
+            animation-duration: 3s;
+            animation-delay: 0s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AMOR DA MINHA VIDAAA</h1>
+        <button onclick="mostrarMensagem()">Clica</button>
+        <div id="mensagem">Só pra avisar mesmo que voce é incrivel, que eu tenho muito orgulho de ti, e por  mais dificil e cansativo que a vida seja eu sempre vou estar do teu lado pra qualquer coisa, e tu pode contar cmg pra tudo ta?, eu te amo muito e quero que saiba que tu é extremamente importante pra mim. Eu te amo demaaais cuzudinha 💖 (os corações tao virado pq eu nao consigo desvirar KKKKKKK perdao ta, ainda to aprendendo a fzr isso) </div>
+    </div>
+
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+    <script>
+        function mostrarMensagem() {
+            const mensagem = document.getElementById('mensagem');
+            mensagem.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
